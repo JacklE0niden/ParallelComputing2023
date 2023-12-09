@@ -1,0 +1,17 @@
+# 并行分布式计算期末程序设计项目代码库
+
+- MPI基于C++的<mpi.h>库，编译需要使用mpicxx，并且运行时需要使用特殊的指令格式（详见examples）
+
+- 文件夹说明
+
+  - plot_data 中有测试好的性能表格 根据性能表格绘制的对比图和绘图的python文件
+  - csv_to_xlsx.py 一个可以将csv文件转换为excel文件的脚本
+
+- 运行说明
+  - 在Ubuntu(GNU/Linux wsl)环境下执行make
+  - 运行 mpirun -n 2 ./matvec_col 512 512 512 512 -v -p 4个512分别表示A的行、A的列、B的行、B的列
+  - -v表示验证结果的正确性 -p表示将输出打印到一个csv文件中
+  - 更多的测试样例见test_col.sh和test_row.sh，也可以直接运行这两个脚本文件
+
+
+
